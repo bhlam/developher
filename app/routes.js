@@ -21,15 +21,18 @@ module.exports = module.exports = function(app, passport){
 
 
 	app.post('/', passport.authenticate('local-signup', {
-		successRedirect: '/profile',
+		successRedirect: '/create',
 		failureRedirect: '/',
 		failureFlash: true
 	}));
 
+	app.get('/create', isLoggedIn, function(req, res){
+		res.render('createprofile.ejs', { user: req.user });
+	});
+
 	app.get('/profile', isLoggedIn, function(req, res){
 		res.render('profile.ejs', { user: req.user });
 	});
-
 	app.get('/itinerary', function(req, res) {
      // ejs render automatically looks in the views folder
       res.render('itinerary1.ejs');
