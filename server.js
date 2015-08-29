@@ -12,13 +12,13 @@ var bodyParser = require('body-parser');
 var passport = require('passport');
 var flash = require('connect-flash');
 
-var url = process.env.MONGOLAB_URI || 'mongodb://localhost/test'
+var url ='mongodb://localhost/test' || process.env.MONGOLAB_URI;
 
-// mongoose.connect(url, function(err){
-// 	if(err){
-// 		throw err;
-// 	}
-// });
+mongoose.connect(url, function(err){
+ 	if(err){
+ 		throw err;
+ 	}
+});
 
 require('./config/passport')(passport);
 
@@ -39,21 +39,23 @@ app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
 
 // set the home page route
-app.get('/', function(req, res) {
+// app.get('/', function(req, res) {
 
-    // ejs render automatically looks in the views folder
-    res.render('index');
-});
+//     // ejs render automatically looks in the views folder
+//     res.render('index');
+// });
 
-// set the home page route
-app.get('/itinerary', function(req, res) {
-    // ejs render automatically looks in the views folder
-    res.render('itinerary1');
-});
+// // set the home page route
+// app.get('/itinerary', function(req, res) {
+//     // ejs render automatically looks in the views folder
+//     res.render('itinerary1');
+// });
 
-app.get('/profile', function(req, res){
-	res.render('profile');
-})
+// app.get('/profile', function(req, res){
+// 	res.render('profile');
+// })
+
+require('./app/routes.js')(app, passport);
 
 app.listen(port, function() {
     console.log('Our app is running on http://localhost:' + port);
