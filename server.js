@@ -12,7 +12,7 @@ var bodyParser = require('body-parser');
 var passport = require('passport');
 var flash = require('connect-flash');
 
-var url ='mongodb://localhost/test' || process.env.MONGOLAB_URI;
+var url = process.env.MONGOLAB_URI || 'mongodb://localhost/test';
 
 mongoose.connect(url, function(err){
  	if(err){
