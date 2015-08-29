@@ -27,14 +27,21 @@ module.exports = function(passport) {
 		console.log('the password is: ' + password);
 		process.nextTick(function(){
 			User.findOne({'general.email': email}, function(err, user){
-				if(err)
+				console.log('is there any user? ' + user);
+				if(err){
+					console.log('There is an error');
 					return done(err);
+				}
 				if(user){
+					console.log('why here??????');
 					return done(null, false, req.flash('signupMessage', 'That email already taken'));
-				} else {
+				}
+				else{
+					console.log('123The email is: '+ email);
 					var newUser = new User();
 					console.log('123The email is: '+ email);
-		console.log('123the password is: ' + password);
+					console.log('123the name is: ' + req.body.name);
+					newUser.personal.name = req.body.name;
 					newUser.general.email = email;
 					newUser.general.password = password;
 
@@ -56,12 +63,17 @@ module.exports = function(passport) {
 		},
 		function(req, email, password, done){
 			process.nextTick(function(){
-				User.findOne({ 'local.username': email}, function(err, user){
+				console.log('email is ' + email);
+				console.log('password is ' + password);
+				User.findOne({'general.email': email}, function(err, user){
+					console.log('user is ' + user);
 					if(err)
 						return done(err);
-					if(!user)
+					if(!user){
+						console.log('yes');
 						return done(null, false, req.flash('loginMessage', 'No User found'));
-					if(!user.validPassword(password)){
+					}
+					if(user.general.password !== password){
 						return done(null, false, req.flash('loginMessage', 'invalid password'));
 					}
 					return done(null, user);
