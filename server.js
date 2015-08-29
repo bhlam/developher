@@ -3,7 +3,7 @@ var app = express();
 var mongoose = require('mongoose');
 // set the port of our application
 // process.env.PORT lets the port be set by Heroku
-var port = process.env.PORT || 8081;
+var port = process.env.PORT || 8080;
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
 var morgan = require('morgan');
@@ -14,11 +14,11 @@ var flash = require('connect-flash');
 
 var url = process.env.MONGOLAB_URI || 'mongodb://localhost/test';
 
-mongoose.connect(url, function(err){
- 	if(err){
- 		throw err;
- 	}
-});
+// mongoose.connect(url, function(err){
+//  	if(err){
+//  		throw err;
+//  	}
+// });
 
 require('./config/passport')(passport);
 
