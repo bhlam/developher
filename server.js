@@ -14,11 +14,11 @@ var flash = require('connect-flash');
 
 var url = process.env.MONGOLAB_URI || 'mongodb://localhost/test';
 
-// mongoose.connect(url, function(err){
-//  	if(err){
-//  		throw err;
-//  	}
-// });
+mongoose.connect(url, function(err){
+ 	if(err){
+ 		throw err;
+ 	}
+});
 
 require('./config/passport')(passport);
 
