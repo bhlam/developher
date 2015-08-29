@@ -3,84 +3,130 @@
 
 <head>
 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Adventuristas - Log In</title>
+
+       <link href="//maxcdn.bootstrapcdn.com/bootswatch/3.2.0/superhero/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/agency.css">
+
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/landing-page.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
 </head>
+
 <body>
-<div class="container">
-    <div class="row home-intro text-center">
-        <div class="col-lg-12">
-            <h2 class="tagline">Forever free, open source, and easy to use.</h2>
-            <p class="lead">Start Bootstrap is a library of <strong>free to download Bootstrap 3 themes and templates</strong>. Our themes are open source for any use, even commercial. Download what you like and get started!</p>
-            <hr class="small">
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+        <div class="container topnav">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand topnav" href="#about"> <font face="Kaushan Script"> Adventuristas  </font> </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#about">Home</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
         </div>
+        <!-- /.container -->
+    </nav>
+
+
+    <!-- Header -->
+    <a name="about"></a>
+    <div class="intro-header">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-message">
+                        <h1>Adventuristas</h1>
+                        <h3> <font size="6"> Log In </font> </h3>
+                          <section class="container">
+                            <div class="login" align="center" style="width: 700px ; margin-left: auto ; margin-right: auto ;">
+                              <form method="post" action="index.html">
+                                <div class="transbox">
+                                <p><input type="text" name="login" value="" placeholder="Email"></p>
+                                <p><input type="password" name="password" value="" placeholder="Password"></p>
+                                <p class="remember_me">
+                                  <label>
+                                    <input type="checkbox" name="remember_me" id="remember_me">
+                                    Remember me on this computer
+                                  </label>
+                                </p>
+                               <!--  <p class="submit"><input type="submit" name="commit" value="Login"></p> -->
+                                <button type="submit" class="btn btn-xl">Log In</button>
+                              </form>
+                            </div>
+                              </div>
+                            <div class="login-help">
+                              <p>Forgot your password? <a href="index.html">Click here to reset it</a>.</p>
+                            </div>
+
+                          </section>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
     </div>
-    <div class="row previews">
-        {% for post in site.categories.featured %}
-        <div class="col-lg-4 col-sm-6">
-            <div class="thumbnail">
-                <a href="{{ post.source }}" class="post-image-link">
-                    {{ post.content }}
-                </a>
-                <div class="caption">
-                    <h3>{{ post.title }}</h3>
-                    <p>{{ post.description }}</p>
-                    <a href="{{ post.source }}" class="btn btn-default">Preview &amp; Download</a>
+    <!-- /.intro-header -->
+
+
+
+   
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+       
+                    <p class="copyright text-muted small">Copyright &copy; Adventuristas 2015.</p>
                 </div>
             </div>
         </div>
-        {% endfor %}
-    </div>
-    <div class="text-center btn-home">
-        <a href="/template-categories/all" class="btn btn-outline">View All Themes &amp; Templates</a>
-    </div>
-    <hr class="small">
-    <div class="row text-center">
-        <div class="col-lg-12">
-            <h3>Looking for something more?</h3>
-            <p class="lead">Try these premium Bootstrap themes from WrapBootstrap!</p>
-        </div>
-    </div>
-    <div class="row previews">
-        <div class="col-lg-4 col-sm-6">
-            <div class="thumbnail">
-                <a href="https://wrapbootstrap.com/theme/vitality-multipurpose-one-page-theme-WB02K3KK3?ref=StartBootstrap" class="post-image-link">
-                    <img src="assets/img/premium/vitality.jpg" alt="Premium One Page Bootstrap Theme">
-                </a>
-                <div class="caption">
-                    <h3>Vitality</h3>
-                    <p>Multipurpose One Page Theme</p>
-                    <a href="https://wrapbootstrap.com/theme/vitality-multipurpose-one-page-theme-WB02K3KK3?ref=StartBootstrap" class="btn btn-default">Preview &amp; Purchase</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-sm-6">
-            <div class="thumbnail">
-                <a href="https://wrapbootstrap.com/theme/velocity-designed-for-products-WB0N38R04?ref=StartBootstrap" class="post-image-link">
-                    <img src="assets/img/premium/velocity.jpg" alt="Premium Bootstrap Theme - Velocity">
-                </a>
-                <div class="caption">
-                    <h3>Velocity</h3>
-                    <p>Designed for Products</p>
-                    <a href="https://wrapbootstrap.com/theme/velocity-designed-for-products-WB0N38R04?ref=StartBootstrap" class="btn btn-default">Preview &amp; Purchase</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-sm-6">
-            <div class="thumbnail">
-                <a href="https://wrapbootstrap.com/theme/inspinia-responsive-admin-theme-WB0R5L90S?ref=StartBootstrap" class="post-image-link">
-                    <img src="assets/img/premium/inspinia.jpg" alt="Premium Bootstrap Admin Template">
-                </a>
-                <div class="caption">
-                    <h3>Inspinia</h3>
-                    <p>Responsive Admin Theme</p>
-                    <a href="https://wrapbootstrap.com/theme/inspinia-responsive-admin-theme-WB0R5L90S?ref=StartBootstrap" class="btn btn-default">Preview &amp; Purchase</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="text-center btn-home">
-        <a href="/buy-bootstrap-templates/" class="btn btn-outline">View More Premium Themes</a>
-    </div>
-    <hr class="small">
-</div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
 </body>
+
+</html>
+
