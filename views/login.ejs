@@ -11,9 +11,9 @@
 
     <title>Adventuristas - Log In</title>
 
-       <link href="//maxcdn.bootstrapcdn.com/bootswatch/3.2.0/superhero/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/agency.css">
-
+    <link href="//maxcdn.bootstrapcdn.com/bootswatch/3.2.0/superhero/bootstrap.min.css" rel="stylesheet">
+ 
+     <link rel="stylesheet" href="css/agency.css">
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -21,7 +21,10 @@
     <!-- Custom CSS -->
     <link href="css/landing-page.css" rel="stylesheet">
 
+
+
     <!-- Custom Fonts -->
+     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
@@ -46,13 +49,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand topnav" href="#about"> <font face="Kaushan Script"> Adventuristas  </font> </a>
+                <a href="/" class="navbar-brand topnav" href="#about" style="font-size:4em; font-family: Kaushan Script,Helvetica Neue,Helvetica,Arial,cursive"> Adventuristas  </a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="#about">Home</a>
+                        <a href="/">Home</a>
                     </li>
                 </ul>
             </div>
@@ -72,29 +75,28 @@
                     <div class="intro-message">
                         <h1>Adventuristas</h1>
                         <h3> <font size="6"> Log In </font> </h3>
-                          <section class="container">
-                            <div class="login" align="center" style="width: 700px ; margin-left: auto ; margin-right: auto ;">
+                          <!-- <section class="container"> -->
+                            <div class="login" align="center" style="border:solid LightGray; background-color:LightGray; opacity: 0.95; padding: 10px 0px 10px 0px; width: 500px; margin-left: auto; margin-right: auto; border-radius: 15px">
                               <form method="post" action="index.html">
-                                <div class="transbox">
+                                
                                 <p><input type="text" name="login" value="" placeholder="Email"></p>
                                 <p><input type="password" name="password" value="" placeholder="Password"></p>
                                 <p class="remember_me">
                                   <label>
                                     <input type="checkbox" name="remember_me" id="remember_me">
-                                    Remember me on this computer
+                                    <font color="black">Remember me on this computer</font>
                                   </label>
                                 </p>
                                <!--  <p class="submit"><input type="submit" name="commit" value="Login"></p> -->
                                 <button type="submit" class="btn btn-xl">Log In</button>
                               </form>
-                            </div>
                               </div>
                             <div class="login-help">
                               <p>Forgot your password? <a href="index.html">Click here to reset it</a>.</p>
                             </div>
 
-                          </section>
-                    </div>
+                        <!--   </section>
+ -->                    </div>
                 </div>
             </div>
 
