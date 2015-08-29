@@ -14,11 +14,11 @@ var flash = require('connect-flash');
 
 var url = process.env.MONGOLAB_URI || 'mongodb://localhost/test'
 
-mongoose.connect(url, function(err){
-	if(err){
-		throw err;
-	}
-});
+// mongoose.connect(url, function(err){
+// 	if(err){
+// 		throw err;
+// 	}
+// });
 
 require('./config/passport')(passport);
 
@@ -36,20 +36,25 @@ app.use(flash());
 app.set('view engine', 'ejs');
 
 // make express look in the public directory for assets (css/js/img)
-app.use(express.static(__dirname + '/views'));
+app.use(express.static(__dirname + '/public'));
 
 // set the home page route
-// app.get('/', function(req, res) {
+app.get('/', function(req, res) {
 
-//     // ejs render automatically looks in the views folder
-//     res.render('index');
-// });
+    // ejs render automatically looks in the views folder
+    res.render('index');
+});
 
-// app.get('/profile', function(req, res){
-// 	res.render('profile');
-// })
+// set the home page route
+app.get('/itinerary', function(req, res) {
+    // ejs render automatically looks in the views folder
+    res.render('itinerary1');
+});
 
-require('./app/routes.js')(app, passport);
+app.get('/profile', function(req, res){
+	res.render('profile');
+})
+
 app.listen(port, function() {
     console.log('Our app is running on http://localhost:' + port);
 });
