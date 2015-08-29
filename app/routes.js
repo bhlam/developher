@@ -15,7 +15,7 @@ module.exports = module.exports = function(app, passport){
 	}));
 
 	app.get('/', function(req, res){
-		console.log('111111');
+		//console.log('111111');
 		res.render('index.ejs', { message: req.flash('signupMessage') });
 	});
 
@@ -34,6 +34,7 @@ module.exports = module.exports = function(app, passport){
      // ejs render automatically looks in the views folder
       res.render('itinerary1.ejs');
     });
+
 	app.get('/logout', function(req, res){
 		req.logout();
 		res.redirect('/');
